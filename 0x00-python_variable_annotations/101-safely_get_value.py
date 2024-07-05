@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
-"""More involved type annotations"""
+"""
+Task: 11: Given the parameters and the return values,
+add type annotations to the function
+"""
 
-
-from typing import Any, TypeVar, Union, Mapping, Tuple, Dict
-
+from typing import Any, Mapping, Optional, TypeVar, Union
 
 T = TypeVar('T')
-ResponseType = Union[T, None]
-Def1 = Union[T, None]
+Resp = Union[Any, T]
+Defl = Union[T, None]
 
-def safely_get_value(dct: Mapping, key: Any, default: Def1 = 0) -> ResponseType:
-    """Return a tuple containing the value and the key"""
+
+def safely_get_value(dct: Mapping, key: Any, default: Defl = None) -> Resp:
+    """
+    Retrieves a value from a dict using a given key.
+    """
     if key in dct:
-        return (dct[key])
+        return dct[key]
     else:
-        return (default)
+        return default
