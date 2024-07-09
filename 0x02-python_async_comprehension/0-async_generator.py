@@ -4,10 +4,10 @@
 """
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> Generator[float, None, None]:
     """A coroutine called async_generator taking no args
        loops 10x and each time it sleeps for 1 sec and yield a random
     """
