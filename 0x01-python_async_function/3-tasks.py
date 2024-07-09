@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""create a task_wait_random function with int max_delay"""
 import asyncio
 import random
 from typing import Awaitable
