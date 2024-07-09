@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Import async_generator and write
    a coroutine async_comprhension that will collect
    10 random nums using an async comprehensing over async_generator
